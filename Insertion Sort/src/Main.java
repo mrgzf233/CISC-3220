@@ -11,14 +11,15 @@ public class Main {
     }
 
     public static void insertionSort(int[] A) { // j = key
-        for (int j = 1; j < A.length; j++) {
-            int key = A[j]; // placeholder, sends it out the array
-            int i = j - 1;
-            while (i >= 0 && A[i] < key) {
-                A[i + 1] = A[i];
-                i = i - 1;
+        for (int i = 1; i < A.length; i++) {
+            int keyValue = A[i]; // placeholder, sends it out the array
+            
+            int j = i - 1;
+            while (j >= 0 && A[j] > key) {
+                A[j + 1] = A[j];
+                j--;;
             }
-            A[i + 1] = key; // exits while loop
+            A[j + 1] = keyValue; // exits while loop
         } // end of for loop
 
     }
